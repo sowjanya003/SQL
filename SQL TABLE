@@ -1,0 +1,86 @@
+***CREATE TABLE*** :
+
+  To create a table 
+	SYNTAX:
+CREATE TABLE table_name(																							
+column1 datatyepe1,																																		
+.,																																										
+.,																																										
+...);																																								
+																																											
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+example :    CREATE TABLE Persons(
+                PersonID int,
+                LastName varchar(255),
+                FirstName varchar(255),
+                Address varchar(255),
+                City varchar(255)  );
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+***Creating a table using another table***
+
+Syntax:
+CREATE TABLE new_table_name AS												     
+    SELECT column1, column2,...																								
+    FROM existing_table_name																									
+    WHERE ....;																																	
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+  example:         CREATE TABLE TestTable AS
+                    SELECT personid,city
+                    FROM Persons;
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+***The DROP TABLE***:
+  This statement is used to drop an existing table in a database.
+Syntax:																															
+			DROP TABLE table_name;																							
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''                             
+  example:
+      DROP TABLE TestTable;
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+***AlTER TABLE STATEMENT***:
+
+			The ALTER TABLE statement is used to add, delete, or modify columns in an existing table.
+				It is also used to add and drop various constraints on an existing table.
+
+***ADDING EXTRA COLUMN INTO THE TABLE***
+
+Syntax :																											
+		ALTER TABLE table_name																				
+		ADD column_name datatype;																			
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+example:
+      ALTER TABLE TESTTABLE
+      ADD COLUMN EMAILID;
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+***DROPPING A COLUMN IN A TABLE***
+
+Syntax:																											
+		ALTER TABLE TESTTABLE																							
+		DROP COLUMN Column_name;																					
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+  example:
+      ALTER TABLE TESTTABLE
+      DROP COLUMN EMAILID;
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+***ALTER TABLE - RENAME COLUMN***
+
+Syntax :																									
+			ALTER TABLE table_name														       				
+			RENAME COLUMN old_name to new_name;			
+   
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+	example:
+  ALTER TABLE TESTTABLE
+  RENAME COLUMN CITY TO LOCATION;
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+
+
+
+		
+		  
